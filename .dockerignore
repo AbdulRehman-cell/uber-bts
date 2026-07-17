@@ -1,0 +1,10 @@
+# Ignore the Dockerfile
+Dockerfile
+
+# Ignore the docker-compose file
+docker-compose.yml
+
+# Ignore configuration files
+render.yaml
+.github/
+.env*

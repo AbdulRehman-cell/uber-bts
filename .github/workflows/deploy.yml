@@ -1,0 +1,29 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+      
+    - name: Build Docker image
+      run: docker build -t static-site .
+
+    - name: Run Docker container for health check
+      run: |
+        docker run -d --name static-site-container static-site
+        sleep 10
+        curl --fail http://localhost || exit 1
+        docker stop static-site-container
+
+    - name: Push image to Render
+      run: |
+        echo ${{ secrets.RENDER_API_KEY }} | docker login --username your_render_username --password-stdin your_render_container_registry
+        docker tag static-site your_render_container_registry/static-site:1.0.0
+        docker push your_render_container_registry/static-site:1.0.0

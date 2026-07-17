@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: static-site
+    env: static
+    buildCommand: none
+    startCommand: none
+    healthCheckPath: /
+    routes:
+      - src: /.*
+        dest: /
