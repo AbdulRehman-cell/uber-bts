@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Boat | Uber Boats</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#235AE7"/>
+          <path d="M28 24c-3 2-7 2-10 0l-5-3c-2-1-2-3 0-4l5-3c3-2 7-2 10 0l5 3c2 1 2 3 0 4l-5 3z" fill="#fff"/>
+        </svg>
+        <span class="site-title">Uber Boats</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html" class="active">Book</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero book-hero">
+      <div class="hero-content">
+        <h1>Your Voyage, Your Way</h1>
+        <p>Start your journey by booking a private boat to stunning destinations. Whether it's a romantic getaway, family adventure, or sleek business trip, Uber Boats delivers luxury on the water.</p>
+      </div>
+      <div class="hero-image">
+        <img src="https://picsum.photos/800/500?random=7" alt="Luxury boat ready for booking">
+      </div>
+    </section>
+
+    <section class="booking-form-section">
+      <div class="booking-form-container">
+        <form class="booking-form" id="boatBookingForm" autocomplete="off" novalidate>
+          <h2>Book a Boat</h2>
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="form-row">
+            <label for="destination">Destination</label>
+            <select id="destination" name="destination" required>
+              <option value="" disabled selected>Select a destination</option>
+              <option value="amalfi">Amalfi Coast, Italy</option>
+              <option value="croatia">Dalmatian Islands, Croatia</option>
+              <option value="bahamas">Exuma Cays, Bahamas</option>
+              <option value="santorini">Santorini, Greece</option>
+              <option value="maldives">Maldives Atolls</option>
+              <option value="cannes">French Riviera, Cannes</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="date">Departure Date</label>
+            <input type="date" id="date" name="date" required min="">
+          </div>
+          <div class="form-row">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="12" required placeholder="1-12">
+          </div>
+          <div class="form-row">
+            <label for="boat-type">Boat Type</label>
+            <select id="boat-type" name="boat-type" required>
+              <option value="" disabled selected>Select type</option>
+              <option value="yacht">Luxury Yacht</option>
+              <option value="catamaran">Catamaran</option>
+              <option value="motorboat">Motorboat</option>
+              <option value="sailboat">Sailboat</option>
+              <option value="speedboat">Speedboat</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="notes">Special Requests (optional)</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Food allergies, celebrations, etc."></textarea>
+          </div>
+          <button type="submit" class="cta-button form-submit">Request Booking</button>
+          <div class="form-success-message" id="formSuccessMessage" style="display:none;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="18" fill="#58C5B4"/>
+              <path d="M11 19l5 5 9-9" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Your booking request was received!<br>We'll contact you shortly with confirmation.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="booking-info">
+      <div class="booking-info-grid">
+        <div class="booking-info-card">
+          <div class="info-icon">
+            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+              <circle cx="14" cy="14" r="14" fill="#4E9EF5"/>
+              <path d="M8 14h12M14 8v12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Flexible Scheduling</h4>
+          <p>Choose your ideal departure date and time. We accommodate your plans — even last-minute!</p>
+        </div>
+        <div class="booking-info-card">
+          <div class="info-icon">
+            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+              <circle cx="14" cy="14" r="14" fill="#58C5B4"/>
+              <path d="M10 16l4-4 4 4" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Personal Concierge</h4>
+          <p>Our team tailors your experience — let us know your preferences for cuisine, onboard amenities, or special events.</p>
+        </div>
+        <div class="booking-info-card">
+          <div class="info-icon">
+            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+              <circle cx="14" cy="14" r="14" fill="#2E394E"/>
+              <path d="M14 8v12M8 14h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>No Hidden Fees</h4>
+          <p>Transparent pricing. All costs and taxes included — experience hassle-free luxury travel.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <span>© 2024 Uber Boats. Crafted with care.</span>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="book.html">Book</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    // Set min date for booking form to today
+    document.addEventListener('DOMContentLoaded', function() {
+      var dateInput = document.getElementById('date');
+      if(dateInput){
+        dateInput.min = new Date().toISOString().split('T')[0];
+      }
+
+      // Booking form success animation
+      var form = document.getElementById('boatBookingForm');
+      var successMsg = document.getElementById('formSuccessMessage');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          form.classList.add('submitted');
+          successMsg.style.display = 'flex';
+          setTimeout(function(){
+            successMsg.style.opacity = 1;
+          }, 50);
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
