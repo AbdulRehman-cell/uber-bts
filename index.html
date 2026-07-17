@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Uber Boats | Book Your Maritime Journey</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="nav-logo">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="10" fill="#235AE7"/>
-          <path d="M28 24c-3 2-7 2-10 0l-5-3c-2-1-2-3 0-4l5-3c3-2 7-2 10 0l5 3c2 1 2 3 0 4l-5 3z" fill="#fff"/>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-logo" tabindex="0">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect width="36" height="36" rx="10" fill="#235AE7" />
+          <path d="M28 24c-3 2-7 2-10 0l-5-3c-2-1-2-3 0-4l5-3c3-2 7-2 10 0l5 3c2 1 2 3 0 4l-5 3z" fill="#fff" />
         </svg>
         <span class="site-title">Uber Boats</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="about.html">About</a></li>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" class="active" role="menuitem" aria-current="page">Home</a></li>
+        <li role="none"><a href="book.html" role="menuitem">Book</a></li>
+        <li role="none"><a href="destinations.html" role="menuitem">Destinations</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-label="Main hero section">
       <div class="hero-content">
         <h1>Book Your Boat, Discover More</h1>
         <p>Seamlessly book private boats for unique destinations — luxury and adventure await on every journey with Uber Boats.</p>
-        <a href="book.html" class="cta-button">Book a Boat</a>
+        <a href="book.html" class="cta-button" role="button">Book a Boat</a>
       </div>
       <div class="hero-image">
-        <img src="https://picsum.photos/800/500?random=1" alt="Boat cruising on blue waters">
+        <img
+          src="https://picsum.photos/800/500?random=1"
+          alt="Boat cruising on blue waters"
+          loading="lazy"
+          width="800"
+          height="500"
+        />
       </div>
     </section>
 
-    <section class="features">
+    <section class="features" aria-label="Features and benefits">
       <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="16" r="16" fill="#4E9EF5"/>
-              <path d="M8 24l8-8 8 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <article class="feature-card" tabindex="0">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" fill="none" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <circle cx="16" cy="16" r="16" fill="#4E9EF5" />
+              <path d="M8 24l8-8 8 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
           <h3>Effortless Booking</h3>
           <p>Reserve a boat in just a few clicks, all from your device.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="16" r="16" fill="#58C5B4"/>
-              <path d="M16 10v12M10 16h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </article>
+
+        <article class="feature-card" tabindex="0">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" fill="none" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <circle cx="16" cy="16" r="16" fill="#58C5B4" />
+              <path d="M16 10v12M10 16h12" stroke="#fff" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <h3>Curated Destinations</h3>
           <p>Choose from stunning seaside locales and island escapes.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="16" r="16" fill="#2E394E"/>
-              <path d="M20 12c0 2-2 4-4 4s-4-2-4-4M16 20v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </article>
+
+        <article class="feature-card" tabindex="0">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" fill="none" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <circle cx="16" cy="16" r="16" fill="#2E394E" />
+              <path d="M20 12c0 2-2 4-4 4s-4-2-4-4M16 20v2" stroke="#fff" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <h3>Premium Experience</h3>
           <p>Relax on fully-equipped boats with professional crews.</p>
-        </div>
+        </article>
       </div>
     </section>
   </main>
@@ -79,7 +86,7 @@
   <footer>
     <div class="footer-container">
       <span>© 2024 Uber Boats. Crafted with care.</span>
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="about.html">About</a>
         <a href="destinations.html">Destinations</a>
         <a href="book.html">Book</a>
